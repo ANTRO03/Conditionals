@@ -1,34 +1,37 @@
-
-let randomNumber = true;
-let computerChoice = true;
-
-const yourChoice1 = "heads";
-const yourchoice2 = "tails";
+const userChoice = prompt("heads or tails")
+const randomNumber = Math.floor(Math.random() * 2);
+let computerChoice
 
 
 
-prompt("heads or tails")
+if(randomNumber === 0){
+  computerChoice = "heads"
+}
+else {
+  computerChoice = "tails"
+}
 
-if(computerChoice) { userChoice = "You guessed right! The coin flip landed on" + " " + yourChoice1; }
+if(userChoice === computerChoice){
+  alert("You guessed right! The coin flip landed on " + userChoice)
+}
+else{
+  alert("Sorry, the coin flip landed on " + computerChoice)
+}
 
-  else if ("tails") { userChoice = "Sorry, the coin flip landed on" + " " + yourchoice2; } 
- 
-alert(userChoice);
 
-const birthYear = 2023
-prompt("what year were you born")
-if((2003 - birthYear) < 21){
+
+const birthYear = prompt("what year were you born")
+const age = 2023 - birthYear
+if(age < 21){
     alert("Sorry, you are not old enough to drink in the US")
 }
   
-if((2002 - birthYear) < 21){
+if(age === 21){
   alert("You are old enough to drink in the US...barely")
 }  
 
-if((2001 + birthYear) > 21){
+if(age > 21){
   alert("You are old enough to drink in the US")
 }
 
 
-
-(Math.random() * (maximum - minimum + 1) ) << 0
